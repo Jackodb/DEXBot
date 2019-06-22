@@ -78,8 +78,8 @@ QScrollBar {
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>1029</width>
-         <height>340</height>
+         <width>1023</width>
+         <height>319</height>
         </rect>
        </property>
        <property name="sizePolicy">
@@ -215,6 +215,40 @@ QScrollBar {
              <property name="bottomMargin">
               <number>0</number>
              </property>
+             <item>
+              <widget class="QPushButton" name="add_worker_button_2">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>100</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>250</width>
+                 <height>25</height>
+                </size>
+               </property>
+               <property name="cursor">
+                <cursorShape>PointingHandCursor</cursorShape>
+               </property>
+               <property name="toolTipDuration">
+                <number>-1</number>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">border: 0px; background-color: #3A6257; width: 250px; height: 20px; border-radius: 10px; color: #ffffff;</string>
+               </property>
+               <property name="text">
+                <string>Visualisation</string>
+               </property>
+              </widget>
+             </item>
              <item>
               <spacer name="verticalSpacer">
                <property name="orientation">

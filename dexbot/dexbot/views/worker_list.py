@@ -15,6 +15,8 @@ from .layouts.flow_layout import FlowLayout
 from PyQt5 import QtGui, QtWidgets
 from bitsharesapi.bitsharesnoderpc import BitSharesNodeRPC
 
+from .sample import test
+
 
 class MainView(QtWidgets.QMainWindow, Ui_MainWindow):
 
@@ -33,6 +35,7 @@ class MainView(QtWidgets.QMainWindow, Ui_MainWindow):
         self.main_ctrl.set_info_handler(self.set_worker_status)
         self.layout = FlowLayout(self.scrollAreaContent)
 
+        self.add_worker_button_2.clicked.connect(lambda: self.handle_visualisation())
         self.add_worker_button.clicked.connect(lambda: self.handle_add_worker())
         self.settings_button.clicked.connect(lambda: self.handle_open_settings())
         self.help_button.clicked.connect(lambda: self.handle_open_documentation())
@@ -81,6 +84,10 @@ class MainView(QtWidgets.QMainWindow, Ui_MainWindow):
     def change_worker_widget_name(self, old_worker_name, new_worker_name):
         worker_data = self.worker_widgets.pop(old_worker_name)
         self.worker_widgets[new_worker_name] = worker_data
+
+    @gui_error
+    def handle_visualisation(self):
+        test()
 
     @gui_error
     def handle_add_worker(self):
